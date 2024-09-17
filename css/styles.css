@@ -72,7 +72,7 @@ h1 {
   gap: 10px;
   padding: 20px;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 .linktree-button {
@@ -98,11 +98,11 @@ h1 {
 }
 
 .carousel-container {
-  flex-grow: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
 }
 .carousel {
   display: flex;
@@ -110,7 +110,7 @@ h1 {
   align-items: center;
   width: 100%;
   max-width: 1200px;
-  height: 400px;
+  height: 500px;
 }
 .card {
   flex: 0 0 300px;
@@ -159,7 +159,7 @@ h1 {
   color: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   transition: all 0.3s ease; /* Adicionado para suavizar a transição do conteúdo */
 }
 .card:hover .card-content,
@@ -173,6 +173,21 @@ h1 {
 .card p {
   margin: 0;
   font-size: 16px;
+}
+.youtube-player-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.youtube-player-container iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .pagination {
   display: flex;
@@ -237,6 +252,13 @@ h1 {
   }
   .pagination {
     display: none;
+  }
+  .carousel-container,
+  .youtube-player-container {
+    padding: 10px;
+  }
+  .youtube-player-container {
+    margin: 20px auto;
   }
 }
 @media (max-width: 480px) {
