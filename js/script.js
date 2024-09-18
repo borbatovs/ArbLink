@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
     const typewriterElement = document.getElementById('typewriter');
-    const text = "@villelabrasilbank"; // O texto que você quer animar
-    const typingSpeed = 150; // Velocidade de digitação (em milissegundos)
-    const erasingSpeed = 100; // Velocidade de apagamento (em milissegundos)
-    const waitBeforeErasing = 2000; // Tempo de espera antes de apagar (em milissegundos)
-    const waitBeforeRetyping = 1000; // Tempo de espera antes de redigitar (em milissegundos)
+    const text = "@villelabrasilbank";
+    const typingSpeed = 150;
+    const erasingSpeed = 100;
+    const waitBeforeErasing = 2000;
+    const waitBeforeRetyping = 1000;
     const carousel = document.querySelector('.carousel');
     const cards = carousel.querySelectorAll('.card');
     const pagination = document.querySelector('.pagination');
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function eraseText(i, cb) {
-        if (i > 1) { // Mudamos para 1 para manter o primeiro caractere
+        if (i > 1) {
             typewriterElement.innerHTML = text.substring(0, i);
             i--;
             setTimeout(function() {
@@ -43,10 +43,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Inicializa com o primeiro caractere
+    // Initialize with the first character
     typewriterElement.innerHTML = text.charAt(0);
     
-    // Inicia o loop de animação após um breve delay
+    // Start the animation loop after a brief delay
     setTimeout(typeLoop, 1000);
     
     function updateCarousel(index) {
@@ -85,9 +85,9 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!isMobile) {
         cards.forEach((card, index) => {
             card.addEventListener('click', (event) => {
-                event.stopPropagation(); // Impede que o clique no card propague para o documento
+                event.stopPropagation(); // // Prevents the click on the card from propagating to the document
                 if (currentIndex === index) {
-                    // Se o card já está ativo, redireciona para a URL
+                    // If the card is already active, redirect to the URL
                     const url = card.getAttribute('data-url');
                     if (url) {
                         window.location.href = url;
@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
 
-        // Adiciona um event listener ao documento para fechar o card ativo quando clicar fora
+        // Add an event listener to the document to close the active card when clicking outside
         document.addEventListener('click', () => {
             if (currentIndex !== null) {
                 currentIndex = null;
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     } else {
-        // Para dispositivos móveis, adiciona redirecionamento direto no clique
+        // For mobile devices, add direct redirection on click
         cards.forEach((card) => {
             card.addEventListener('click', () => {
                 const url = card.getAttribute('data-url');
