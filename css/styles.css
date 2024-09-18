@@ -83,6 +83,7 @@ h1 {
 
 .linktree-button {
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -103,6 +104,20 @@ h1 {
 
 .linktree-button svg {
   margin-right: 10px;
+}
+
+.new-tag {
+  position: absolute;
+  top: 10px;
+  right: -10px;
+  background-color: #ff4757; /* Cor vermelha sutil */
+  color: white;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .carousel-container {
@@ -144,7 +159,7 @@ h1 {
   position: relative;
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  animation: fadeInUp 0.6s ease-out backwards;
+  animation: fadeInUp 0.8s ease-out backwards;
 }
 
 .card:nth-child(1) {
@@ -267,10 +282,57 @@ h1 {
   opacity: 1;
 }
 
+.footer {
+  background-color: rgba(5, 35, 43, 0.9);
+  color: #fff;
+  padding: 20px 0;
+  margin-top: auto; /* Empurra o rodapé para baixo se o conteúdo for curto */
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.footer p {
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.footer-links {
+  margin: 15px 0;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 14px;
+  transition: opacity 0.3s ease;
+}
+
+.footer-links a:hover {
+  opacity: 0.8;
+}
+
+.legal-info {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
 @media (max-width: 768px) {
   .linktree-buttons,
   .carousel-container {
     padding: 20px;
+  }
+
+  .new-tag {
+    top: 10px;
+    right: -8px;
+    font-size: 10px;
+    padding: 1px 4px;
   }
 
   .carousel {
@@ -334,6 +396,16 @@ h1 {
 
   .youtube-player-container {
     margin: 20px auto;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-links a {
+    margin: 5px 0;
   }
 }
 
