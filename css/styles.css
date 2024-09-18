@@ -41,6 +41,26 @@ h1 {
   margin: 0 0 15px;
 }
 
+@keyframes blink {
+  0%,
+  100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgba(255, 255, 255, 0.75);
+  }
+}
+
+#typewriter {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: blink 0.7s step-end infinite;
+  padding-right: 4px; /* Espaço para o cursor */
+}
+
 .social-icons {
   display: flex;
   justify-content: center;
@@ -110,7 +130,7 @@ h1 {
   position: absolute;
   top: 10px;
   right: -10px;
-  background-color: #ff4757; /* Cor vermelha sutil */
+  background-color: #ff4757;
   color: white;
   font-size: 10px;
   padding: 2px 6px;
@@ -286,7 +306,7 @@ h1 {
   background-color: rgba(5, 35, 43, 0.9);
   color: #fff;
   padding: 20px 0;
-  margin-top: auto; /* Empurra o rodapé para baixo se o conteúdo for curto */
+  margin-top: auto;
 }
 
 .footer-content {
@@ -299,6 +319,7 @@ h1 {
 .footer p {
   margin: 10px 0;
   font-size: 14px;
+  opacity: 0.5;
 }
 
 .footer-links {
@@ -310,7 +331,8 @@ h1 {
   text-decoration: none;
   margin: 0 10px;
   font-size: 14px;
-  transition: opacity 0.3s ease;
+  border-bottom: solid 1px #fff;
+  opacity: 0.5;
 }
 
 .footer-links a:hover {
@@ -319,7 +341,7 @@ h1 {
 
 .legal-info {
   font-size: 12px;
-  opacity: 0.7;
+  opacity: 0.5;
 }
 
 @media (max-width: 768px) {
