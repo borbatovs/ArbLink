@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const carousel = document.querySelector('.carousel');
     const cards = carousel.querySelectorAll('.card');
     const pagination = document.querySelector('.pagination');
+    const parallaxBg = document.querySelector('.parallax-bg');
     let currentIndex = null;
     const totalCards = cards.length;
     let isMobile = window.innerWidth <= 768;
@@ -77,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initial setup
     updateCarousel(currentIndex);
-
+    
     // Resize event listener
     window.addEventListener('resize', () => {
         const wasMobile = isMobile;
@@ -102,4 +103,10 @@ document.addEventListener('DOMContentLoaded', function() {
             updateCarousel(currentIndex);
         }
     });
+    
+    window.addEventListener('scroll', function() {
+        let scrollPosition = window.pageYOffset;
+        parallaxBg.style.backgroundPosition = `calc(50% + ${scrollPosition * 0.1}px) calc(50% + ${scrollPosition * 0.1}px)`;
+    });
+
 });

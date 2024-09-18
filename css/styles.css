@@ -121,6 +121,17 @@ h1 {
   height: 500px;
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .card {
   flex: 0 0 300px;
   height: 400px;
@@ -133,6 +144,17 @@ h1 {
   position: relative;
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeInUp 0.6s ease-out backwards;
+}
+
+.card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.card:nth-child(3) {
+  animation-delay: 0.3s;
 }
 
 .card:hover {
@@ -166,14 +188,13 @@ h1 {
   background: linear-gradient(
     to top,
     rgba(0, 0, 0, 0.8) 0%,
-    rgba(0, 0, 0, 0.4) 60%,
+    rgba(0, 0, 0, 0.4) 70%,
     rgba(0, 0, 0, 0) 100%
   );
   color: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  transition: all 0.3s ease;
+  justify-content: flex-end;
 }
 
 .card:hover .card-content,
@@ -187,8 +208,24 @@ h1 {
 }
 
 .card p {
-  margin: 0;
-  font-size: 16px;
+  margin: 0 0 15px;
+  font-size: 14px;
+}
+
+.saiba-mais-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+}
+
+.saiba-mais-btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .youtube-player-container {
@@ -270,6 +307,15 @@ h1 {
     background: none;
     color: #05232b;
     transition: none;
+  }
+
+  .saiba-mais-btn {
+    background-color: #05232b;
+    color: white;
+  }
+
+  .saiba-mais-btn:hover {
+    background-color: #083e4a;
   }
 
   .card:hover .card-content,
