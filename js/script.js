@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const typewriterElement = document.getElementById('typewriter');
-    const text = "@villelabrasilbank";
+    const text = "@VillelaBrasilBank";
     const typingSpeed = 150;
     const erasingSpeed = 100;
     const waitBeforeErasing = 2000;

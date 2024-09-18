@@ -432,6 +432,11 @@ h1 {
 }
 
 @media (max-width: 480px) {
+  #typewriter {
+    font-size: 1.5em;
+    letter-spacing: 1px;
+  }
+
   .linktree-buttons,
   .carousel-container {
     padding: 10px;
