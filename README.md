@@ -1,6 +1,6 @@
-# LinkHub
+# ArbLink
 
-LinkHub is an interactive web platform that combines the functionality of a link aggregator (similar to Linktree) with a dynamic product showcase carousel. This project aims to provide businesses and individuals with a sleek, customizable solution for presenting their key links and featured products or services in one centralized, visually appealing interface.
+ArbLink is an interactive web platform that combines the functionality of a link aggregator (similar to Linktree) with a dynamic product showcase carousel. This project aims to provide businesses and individuals with a sleek, customizable solution for presenting their key links and featured products or services in one centralized, visually appealing interface.
 
 ## Key Features
 
