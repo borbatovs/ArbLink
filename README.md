@@ -20,4 +20,4 @@ This project is ideal for businesses looking to create a unified online presence
 
 ## Live Demo
 
-Check out the live demo of LinkHub (https://borbatovs.github.io/linkhub/).
+Check out the live demo of LinkHub (https://borbatovs.github.io/ArbLink/).
