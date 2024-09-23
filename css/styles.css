@@ -448,11 +448,12 @@ h1 {
 
   .carousel-container,
   .youtube-player-container {
-    padding: 10px;
+    padding: 0px 10px;
   }
 
   .youtube-player-container {
-    margin: 20px auto;
+    margin-top: 0px;
+    margin-bottom: 24px;
   }
 
   .footer-links {
