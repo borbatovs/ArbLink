@@ -331,8 +331,17 @@ h1 {
 .footer-content {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 20px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-logo img {
+  width: 300px; /* Ou qualquer tamanho desejado */
+  height: auto; /* Mantém a proporção */
+  margin-bottom: 15px;
 }
 
 .footer p {
@@ -454,6 +463,10 @@ h1 {
 
   .footer-links a {
     margin: 5px 0;
+  }
+
+  .footer-logo img {
+    max-width: 240px;
   }
 }
 
