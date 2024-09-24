@@ -412,6 +412,10 @@ h1 {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
+  .card:last-child {
+    margin: 0 0 20px;
+  }
+
   .card-image {
     width: 40%;
     height: 150px;
@@ -493,6 +497,10 @@ h1 {
   .card.active {
     flex-direction: column;
     height: auto;
+  }
+
+  .card:last-child {
+    margin: 0 0 10px;
   }
 
   .card-image {
